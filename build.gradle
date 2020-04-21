@@ -41,7 +41,7 @@ ext.versions = [
         springboot           : '2.2.6.RELEASE',
         feigngson            : '8.18.0',
         findbugs             : '3.0.2',
-        frameworklangversion : '0.1.0-BUILD-SNAPSHOT'
+        frameworklangversion : 'spring_boot_2-SNAPSHOT'
 ]
 
 apply plugin: 'io.spring.dependency-management'
@@ -59,7 +59,7 @@ repositories {
 
 dependencyManagement {
     imports {
-        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR2'
+        mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Hoxton.SR3'
     }
 }
 
@@ -130,6 +130,8 @@ rat {
             "gradlew.bat",
             "README.md",
             ".project",
+            "bin/**",
+            ".classpath",
             ".settings/**"
     ]
 }
